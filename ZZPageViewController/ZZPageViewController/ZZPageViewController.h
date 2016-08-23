@@ -9,6 +9,18 @@
 #import <UIKit/UIKit.h>
 @protocol ZZPageViewControllerDataSource;
 @protocol ZZPageViewControllerDelegate;
+/**
+ *  动画结束回调
+ */
+typedef void(^Completion)();
+/**
+ *  滚动进度回调
+ *
+ *  @param currentPage         当前页
+ *  @param currentPageProgress 在当前页滚动的进度
+ *  @param totalProgress       在总控制器滚动的进度
+ */
+typedef void(^SrollProgress)(NSInteger currentPage, CGFloat currentPageProgress, CGFloat totalProgress);
 
 @interface ZZScrollView : UIScrollView
 
@@ -31,6 +43,28 @@
  *  代理
  */
 @property (nonatomic, weak) id<ZZPageViewControllerDelegate> delegate;
+/**
+ *  总页数
+ */
+@property (nonatomic, assign, readonly) NSInteger totalPage;
+/**
+ *  当前页数
+ */
+@property (nonatomic, assign, readonly) NSInteger currentPage;
+/**
+ *  设置滚动到指定页
+ *
+ *  @param index      指定页索引
+ *  @param animated   是否动画过渡
+ *  @param completion 如果设置了动画，动画结束回调
+ */
+-(void)setCurrentPageToIndex:(NSInteger)index animated:(BOOL)animated completion:(Completion)completion;
+/**
+ *  监控当前滚动进度
+ *
+ *  @param progress 滚动进度回调
+ */
+-(void)monitorScrollProgress:(SrollProgress)progress;
 
 @end
 

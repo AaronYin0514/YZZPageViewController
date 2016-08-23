@@ -8,7 +8,11 @@
 
 #import "ZZPageViewController.h"
 
-@interface ZZPageViewController ()
+@interface ZZPageViewController () <UIScrollViewDelegate>
+
+@property (copy, nonatomic) Completion completion;
+
+@property (copy, nonatomic) SrollProgress srollProgress;
 
 @end
 
@@ -41,6 +45,7 @@
     _contentScrollView.pagingEnabled = YES;
     _contentScrollView.bouncesZoom = NO;
     _contentScrollView.clipsToBounds = NO;
+    _contentScrollView.delegate = self;
     [self.view addSubview:_contentScrollView];
 }
 
@@ -52,6 +57,8 @@
     NSAssert([_dataSource respondsToSelector:@selector(pageViewController:memberAtIndex:)], @"必须实现numbersOfSubViewControllers:方法");
     
     NSInteger count = [_dataSource numbersOfSubViewControllers:self];
+    
+    _totalPage = count;
     
     if (count <= 0) return;
     
@@ -80,6 +87,10 @@
     }
 }
 
+-(NSInteger)currentPage {
+    return _contentScrollView.contentOffset.x * _totalPage / _contentScrollView.contentSize.width;
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if (_dataSource) {
         NSInteger count = [_dataSource numbersOfSubViewControllers:self];
@@ -101,6 +112,46 @@
                 obj.view.frame = CGRectMake(idx * (width - 3 * _padding), edgeInsets.top, width - 4 *_padding, _contentScrollView.bounds.size.height - edgeInsets.top - edgeInsets.bottom);
             }];
         }
+    }
+}
+
+-(void)setCurrentPageToIndex:(NSInteger)index animated:(BOOL)animated completion:(void (^)())completion {
+    if (index < 0) return;
+    if (_totalPage == 0 || index > _totalPage || index == self.currentPage) return;
+    if (animated && completion) _completion = completion;
+    CGFloat width = _contentScrollView.bounds.size.width / _totalPage;
+    [_contentScrollView setContentOffset:CGPointMake(index * width, 0) animated:animated];
+}
+
+-(void)monitorScrollProgress:(SrollProgress)progress {
+    if (progress) {
+        _srollProgress = progress;
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"%s", __func__);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (_srollProgress) {
+        NSInteger currentPage = self.currentPage;
+        CGFloat width = scrollView.contentSize.width / _totalPage;
+        CGFloat currentWidtnInPage = scrollView.contentOffset.x - currentPage * width;
+        CGFloat currentProgress = currentWidtnInPage / width;
+        CGFloat totalProgress = scrollView.contentOffset.x / scrollView.contentSize.width;
+        _srollProgress(currentPage, currentProgress, totalProgress);
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"%s", __func__);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    if (_completion) {
+        _completion();
     }
 }
 

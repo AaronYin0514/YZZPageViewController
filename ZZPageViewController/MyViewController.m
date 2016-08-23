@@ -44,7 +44,12 @@
     
     controller.delegate = self;
     controller.dataSource = self;
-
+    
+    [controller monitorScrollProgress:^(NSInteger currentPage, CGFloat currentPageProgress, CGFloat totalProgress) {
+        NSLog(@"currentPage : %ld", currentPage);
+        NSLog(@"currentPageProgress : %f", currentPageProgress);
+        NSLog(@"totalProgress : %f", totalProgress);
+    }];
     
     controller.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64);
     
