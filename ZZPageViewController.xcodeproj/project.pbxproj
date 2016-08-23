@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93C677A51D6BF990001A797D /* 说明图.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C677A41D6BF990001A797D /* 说明图.png */; };
 		93E180A71D6A84B700BA452F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180A61D6A84B700BA452F /* main.m */; };
 		93E180AA1D6A84B700BA452F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180A91D6A84B700BA452F /* AppDelegate.m */; };
 		93E180AD1D6A84B700BA452F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180AC1D6A84B700BA452F /* ViewController.m */; };
@@ -15,6 +16,13 @@
 		93E180B51D6A84B700BA452F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E180B31D6A84B700BA452F /* LaunchScreen.storyboard */; };
 		93E180C01D6A84B800BA452F /* ZZPageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180BF1D6A84B800BA452F /* ZZPageViewControllerTests.m */; };
 		93E180CB1D6A84B800BA452F /* ZZPageViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180CA1D6A84B800BA452F /* ZZPageViewControllerUITests.m */; };
+		93E180DB1D6A853D00BA452F /* ZZPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180DA1D6A853D00BA452F /* ZZPageViewController.m */; };
+		93E180DE1D6A9AEF00BA452F /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180DD1D6A9AEF00BA452F /* OneViewController.m */; };
+		93E180E11D6A9AFB00BA452F /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180E01D6A9AFB00BA452F /* TwoViewController.m */; };
+		93E180E41D6A9B0900BA452F /* ThireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180E31D6A9B0900BA452F /* ThireViewController.m */; };
+		93E180E71D6A9B1600BA452F /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180E61D6A9B1600BA452F /* FourViewController.m */; };
+		93E180EA1D6A9B1E00BA452F /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180E91D6A9B1E00BA452F /* FiveViewController.m */; };
+		93E180ED1D6A9BC300BA452F /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E180EC1D6A9BC300BA452F /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93C677A41D6BF990001A797D /* 说明图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "说明图.png"; sourceTree = "<group>"; };
 		93E180A21D6A84B700BA452F /* ZZPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E180A61D6A84B700BA452F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93E180A81D6A84B700BA452F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +60,20 @@
 		93E180C61D6A84B800BA452F /* ZZPageViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZPageViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E180CA1D6A84B800BA452F /* ZZPageViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZPageViewControllerUITests.m; sourceTree = "<group>"; };
 		93E180CC1D6A84B800BA452F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E180D91D6A853D00BA452F /* ZZPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPageViewController.h; sourceTree = "<group>"; };
+		93E180DA1D6A853D00BA452F /* ZZPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPageViewController.m; sourceTree = "<group>"; };
+		93E180DC1D6A9AEF00BA452F /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		93E180DD1D6A9AEF00BA452F /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		93E180DF1D6A9AFB00BA452F /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		93E180E01D6A9AFB00BA452F /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		93E180E21D6A9B0900BA452F /* ThireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThireViewController.h; sourceTree = "<group>"; };
+		93E180E31D6A9B0900BA452F /* ThireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThireViewController.m; sourceTree = "<group>"; };
+		93E180E51D6A9B1600BA452F /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
+		93E180E61D6A9B1600BA452F /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		93E180E81D6A9B1E00BA452F /* FiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveViewController.h; sourceTree = "<group>"; };
+		93E180E91D6A9B1E00BA452F /* FiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
+		93E180EB1D6A9BC300BA452F /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		93E180EC1D6A9BC300BA452F /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +124,24 @@
 		93E180A41D6A84B700BA452F /* ZZPageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				93C677A41D6BF990001A797D /* 说明图.png */,
+				93E180D81D6A84C700BA452F /* ZZPageViewController */,
 				93E180A81D6A84B700BA452F /* AppDelegate.h */,
 				93E180A91D6A84B700BA452F /* AppDelegate.m */,
 				93E180AB1D6A84B700BA452F /* ViewController.h */,
 				93E180AC1D6A84B700BA452F /* ViewController.m */,
+				93E180EB1D6A9BC300BA452F /* MyViewController.h */,
+				93E180EC1D6A9BC300BA452F /* MyViewController.m */,
+				93E180DC1D6A9AEF00BA452F /* OneViewController.h */,
+				93E180DD1D6A9AEF00BA452F /* OneViewController.m */,
+				93E180DF1D6A9AFB00BA452F /* TwoViewController.h */,
+				93E180E01D6A9AFB00BA452F /* TwoViewController.m */,
+				93E180E21D6A9B0900BA452F /* ThireViewController.h */,
+				93E180E31D6A9B0900BA452F /* ThireViewController.m */,
+				93E180E51D6A9B1600BA452F /* FourViewController.h */,
+				93E180E61D6A9B1600BA452F /* FourViewController.m */,
+				93E180E81D6A9B1E00BA452F /* FiveViewController.h */,
+				93E180E91D6A9B1E00BA452F /* FiveViewController.m */,
 				93E180AE1D6A84B700BA452F /* Main.storyboard */,
 				93E180B11D6A84B700BA452F /* Assets.xcassets */,
 				93E180B31D6A84B700BA452F /* LaunchScreen.storyboard */,
@@ -138,6 +175,15 @@
 				93E180CC1D6A84B800BA452F /* Info.plist */,
 			);
 			path = ZZPageViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		93E180D81D6A84C700BA452F /* ZZPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93E180D91D6A853D00BA452F /* ZZPageViewController.h */,
+				93E180DA1D6A853D00BA452F /* ZZPageViewController.m */,
+			);
+			path = ZZPageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +291,7 @@
 			files = (
 				93E180B51D6A84B700BA452F /* LaunchScreen.storyboard in Resources */,
 				93E180B21D6A84B700BA452F /* Assets.xcassets in Resources */,
+				93C677A51D6BF990001A797D /* 说明图.png in Resources */,
 				93E180B01D6A84B700BA452F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E180EA1D6A9B1E00BA452F /* FiveViewController.m in Sources */,
 				93E180AD1D6A84B700BA452F /* ViewController.m in Sources */,
+				93E180DE1D6A9AEF00BA452F /* OneViewController.m in Sources */,
+				93E180E71D6A9B1600BA452F /* FourViewController.m in Sources */,
+				93E180ED1D6A9BC300BA452F /* MyViewController.m in Sources */,
+				93E180DB1D6A853D00BA452F /* ZZPageViewController.m in Sources */,
+				93E180E11D6A9AFB00BA452F /* TwoViewController.m in Sources */,
 				93E180AA1D6A84B700BA452F /* AppDelegate.m in Sources */,
 				93E180A71D6A84B700BA452F /* main.m in Sources */,
+				93E180E41D6A9B0900BA452F /* ThireViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +552,7 @@
 				93E180D11D6A84B800BA452F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93E180D21D6A84B800BA452F /* Build configuration list for PBXNativeTarget "ZZPageViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +561,7 @@
 				93E180D41D6A84B800BA452F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93E180D51D6A84B800BA452F /* Build configuration list for PBXNativeTarget "ZZPageViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +570,7 @@
 				93E180D71D6A84B800BA452F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
