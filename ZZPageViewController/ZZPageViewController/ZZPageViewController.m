@@ -32,6 +32,11 @@
     [self addObserver:self forKeyPath:@"view.frame" options:NSKeyValueObservingOptionNew context:nil];
 }
 
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    [super didMoveToParentViewController:parent];
+    parent.automaticallyAdjustsScrollViewInsets = NO;
+}
+
 -(void)dealloc {
     [self removeObserver:self forKeyPath:@"view.frame"];
 }

@@ -51,7 +51,7 @@
         NSLog(@"totalProgress : %f", totalProgress);
     }];
     
-    controller.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64);
+    controller.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64);
     
     [self addChildViewController:controller];
     
@@ -73,7 +73,7 @@
 }
 
 -(CGFloat)paddingForItemInPageViewController:(ZZPageViewController *)pageViewController {
-    return 0.0;
+    return 20.0;
 }
 
 @end
